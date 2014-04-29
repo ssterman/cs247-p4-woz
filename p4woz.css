@@ -53,6 +53,22 @@ body {
 	opacity: 0.95;
 }
 
+#controlpanel_rm {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	right: 0px;
+	top: 70px;
+	background-color: lightblue;
+	border-style: solid;
+	border-color: grey;
+	border-width: 5px;
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 35px;
+	display: none;
+}
+
 #container {
     margin: 0px auto;
     width: 200px;
@@ -106,4 +122,39 @@ body {
 	display: none;
 	top: 170px;
 	left: 100px;
+}
+
+#msgpage {
+	width: 90%;
+	height: 100%;
+	overflow: hidden;
+	margin: 10px;
+}
+
+#play {
+	width: 15px;
+	height: 15px;
+	background-color: red;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+#container_rm {
+	margin: 0px auto;
+    width: 200px;
+    height: 150px;
+    border: 10px #333 solid;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+#recordresponse {
+	width: 35px;
+	height: 35px;
+	background-color: blue;
+	position: absolute;
+	right: 80px;
+	top: 180px;
 }
