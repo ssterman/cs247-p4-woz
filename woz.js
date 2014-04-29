@@ -12,6 +12,16 @@ function showcontrolpanel() {
 	}
 }
 
+function showcontrolpanel_rm() {
+	var cp = document.getElementById("controlpanel_rm");
+	if (cp.style.display == 'inline') {
+		cp.style.display = 'none';
+	} else {
+		cp.style.display = 'inline';
+	}
+}
+
+
 function fakerecord() {
 	var vid = document.getElementById("videoElement");
 	if (!vid.paused) {
@@ -52,4 +62,10 @@ function resetAll() {
 	sent_msg.style.display = "none"; 
 	var vid = document.getElementById("videoElement");
 	vid.pause();
+}
+
+
+function playvid() {
+	var vid = document.getElementById("videoElement");
+	vid.play();
 }
