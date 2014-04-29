@@ -10,14 +10,14 @@
 
 	<body>
 
-<!-- 	<iframe src="http://thoughtcatalog.com/oliver-emberton/2014/02/how-to-connect-deeply-with-anyone-in-5-minutes/" id="fakepage"></iframe>
- -->
-	<iframe  id="fakepage"></iframe>
+ 	<div id="browser">
+	<iframe src="http://thoughtcatalog.com/oliver-emberton/2014/02/how-to-connect-deeply-with-anyone-in-5-minutes/" width="800px"
+	 height="600px" frameborder="0" id="fakepage"></iframe>
 
- 	<div id="extension" onclick="showcontrolpanel()">BluhBluh</div>
+ 	<div id="extension" onclick="showcontrolpanel()"><img id="img_icon" src="images/icon_logo.png"></img></div>
 	<div id="controlpanel">
 		<div id="container">
-			<div id="rec" onclick="fakerecord()"></div>
+			<div id="rec" onclick="fakerecord()"><img id="play_stop" src="images/icon-stop.png" width="30px" height="30px"></div>
 			<video id="videoElement"></video>
 		</div>
 		<div id="friendscontainer">
@@ -28,7 +28,7 @@
 		</div>
 		<div id="sent_msg">You Message has been Sent!</div>
 	</div>
-
+	</div>
 
 	<!-- http://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm -->
 	<script>

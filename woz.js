@@ -17,9 +17,11 @@ function fakerecord() {
 	if (!vid.paused) {
 		vid.pause();
 		document.getElementById("friendscontainer").style.display = "inline";
+		document.getElementById("play_stop").src="images/icon-play.png";
 	} else {
 		document.getElementById("friendscontainer").style.display = "none";
 		vid.play();
+		document.getElementById("play_stop").src="images/icon-stop.png";
 	}
 }
 
