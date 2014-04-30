@@ -13,6 +13,7 @@ function showcontrolpanel() {
 }
 
 function showcontrolpanel_rm() {
+
 	var cp = document.getElementById("controlpanel_rm");
 	if (cp.style.display == 'inline') {
 		cp.style.display = 'none';
@@ -27,9 +28,11 @@ function fakerecord() {
 	if (!vid.paused) {
 		vid.pause();
 		document.getElementById("friendscontainer").style.display = "inline";
+		document.getElementById("send").style.display = "inline";
 		document.getElementById("play_stop").src="images/icon-play.png";
 	} else {
 		document.getElementById("friendscontainer").style.display = "none";
+		document.getElementById("send").style.display = "none";
 		vid.play();
 		document.getElementById("play_stop").src="images/icon-stop.png";
 	}
@@ -42,20 +45,48 @@ function send() {
 	friendscontainer.style.display = "none";
 	var sent_msg = document.getElementById("sent_msg");
 	sent_msg.style.display = "inline"; 
+	var sent = document.getElementById("send");
+	sent.style.opacity = "0.5"; 
 	var controlpanel = document.getElementById("controlpanel");
+	var emily = document.getElementById("emily_pic");
+	var mj = document.getElementById("mj_pic");
+	var sarah = document.getElementById("sarah_pic");
+	emily.style.opacity = 0.5;
+	emily.style.borderColor = "black";
+	mj.style.opacity = 0.5;
+	mj.style.borderColor = "black";
+	sarah.style.opacity = 0.5;
+	sarah.style.borderColor = "black";
 	$(controlpanel).delay(700).fadeOut();
 }
 
-function highlight(div) {
-	console.log(div.style.backgroundColor);
-	if (div.style.backgroundColor == "red") {
-		div.style.backgroundColor = 'grey';
+
+function highlight(img) {
+	if (img.style.opacity == "0.5") {
+		img.style.opacity = "1.0";
+		img.style.borderColor = "green";
+		img.style.borderWidth = "2px";
+		img.style.borderStyle = "solid";
 	} else {
-		div.style.backgroundColor = 'red';
+		img.style.opacity = "0.5";
+		img.style.borderColor = "black";
+		img.style.borderWidth = "2px";
+		img.style.borderStyle = "solid";
 	}
 }
 
 function resetAll() {
+	var sent = document.getElementById("send");
+	sent.style.opacity = "1.0"; 
+	var emily = document.getElementById("emily_pic");
+	var mj = document.getElementById("mj_pic");
+	var sarah = document.getElementById("sarah_pic");
+	emily.style.opacity = "0.5";
+	emily.style.borderColor = "black";
+	mj.style.opacity = "0.5";
+	mj.style.borderColor = "black";
+	sarah.style.opacity = "0.5";
+	sarah.style.borderColor = "black";
 	var vid_container = document.getElementById("container");
 	var friendscontainer = document.getElementById("friendscontainer");
 	vid_container.style.display = "block";
